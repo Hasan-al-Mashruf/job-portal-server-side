@@ -48,7 +48,6 @@ async function run() {
       const endpoint = req.query.email;
       const query = { email: endpoint };
       const findDuplicate = await companies.findOne(query);
-      console.log();
       if (findDuplicate?.email) {
         res.send({ result: findDuplicate });
       }
